@@ -35,17 +35,25 @@ function digPow(n, p){
     for (let i = 0; i < nStr.length; i++) {
         digits.push(parseInt(nStr[i]))
     }
-    
+
     let sum = 0
     for (let i = 0; i < digits.length; i++) {
         sum += digits[i]**(p+i)
+        
     }
     
-    if( sum % n == 0) {
-        return sum / n
-    }
-    else {
-        return -1
-    }
+    return  sum % n == 0 ? sum / n : -1
+
     
 }
+
+
+// MOST EFFICIENT SOLUTION (SELF STUDY) // COULD DO IN ONE LINE//
+
+function digPow(n, p) {
+  var x = String(n).split("")
+  var y = x.reduce((sum, digit, index) => sum + Math.pow(digit, p + index), 0)
+  return y % n ? -1 : y / n
+}
+
+console.log(digPow(46288, 3))
