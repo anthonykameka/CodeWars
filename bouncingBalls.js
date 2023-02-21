@@ -22,6 +22,12 @@
 
 // (Condition 2) not fulfilled).
 
+
+// input height, bounce window
+// output bounces
+
+
+
 function bouncingBall(h,  bounce,  window) {
     // your code here
     

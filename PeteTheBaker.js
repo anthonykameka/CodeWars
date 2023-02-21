@@ -16,11 +16,11 @@ function cakes(recipe, available) {
   
       if (!(key in available) || recipe[key] > available[key]) {
       
-        return 0;  // return 0 if the incredient is not available, or not enough of a ingredient
+        return 0;  // return 0 if the ingredient is not available, or not enough of a ingredient
         }
     }
     
-    let numCakes = Infinity; // initialize to infiinite as we need min later
+    let numCakes = Infinity; // initialize to infinite as we need minimum value of cakes possible with ingredients
     for (const key in recipe) {
       // for every ingredient in recipe, get cakes possible 
       const cakesPossible = Math.floor(available[key] / recipe[key])
